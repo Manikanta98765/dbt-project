@@ -30,7 +30,6 @@ sources:
             description: "foreign key for Asiles table"
             tests:
               - not_null
-              - unique
           - name: DEPARTMENT_ID
             description: "foreign key for departments table"
             tests:
