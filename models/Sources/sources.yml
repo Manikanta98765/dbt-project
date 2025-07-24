@@ -1,0 +1,13 @@
+version: 2
+sources:
+  - name: raw_data # Logical name for the source
+    database: ANALYTICS # Optional: overrides default db
+    schema: DBT_ # Schema where the source table lives
+    tables:
+      - name: AISLES # Actual table name in Snowflake
+        description: "AISLES data from SALES"
+        columns:
+          - name: AISLE
+            description: "ASILE_NAME"
+          - name: AISLE_ID
+            description: "Unique ASILE ID for each customer"
