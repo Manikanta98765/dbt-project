@@ -1,1 +1,1 @@
-select * from analytics.dbt_.aisles
+select * from {{ source("RAW_DATA", "AISLES") }}

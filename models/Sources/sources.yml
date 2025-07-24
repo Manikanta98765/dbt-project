@@ -14,3 +14,24 @@ sources:
             tests:
               - not_null
               - unique
+      - name: PRODUCTS
+        description: "Product data from sales"
+        columns:
+          - name: PRODUCT_ID
+            description: "Unique ID of each product"
+            tests:
+              - not_null
+              - unique
+          - name: PRODUCT_NAME
+            description: "Name of the product"
+            tests:
+              - not_null
+          - name: AISLE_ID
+            description: "foreign key for Asiles table"
+            tests:
+              - not_null
+              - unique
+          - name: DEPARTMENT_ID
+            description: "foreign key for departments table"
+            tests:
+              - not_null
