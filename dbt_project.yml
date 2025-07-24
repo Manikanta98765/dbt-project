@@ -42,3 +42,4 @@ models:
 seeds:
   my_new_project:
     +schema: dbt_seeds
+
