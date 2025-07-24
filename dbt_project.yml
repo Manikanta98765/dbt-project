@@ -39,7 +39,9 @@ models:
     staging:
       +schema: dbt_staging
       +materialized: table
+    transform:
+      +schema: dbt_transform
+      +materialized: incremental
 seeds:
   my_new_project:
     +schema: dbt_seeds
-
