@@ -9,7 +9,8 @@ with
             o.eval_set,
             o.order_number,
             o.order_time,
-            o.order_day
+            o.order_day,
+            current_timestamp as created_date
         from {{ ref("stg_products") }} p
         inner join {{ ref("departments") }} d on d.department_id = p.department_id
         inner join {{ ref("stg_aisle") }} a on p.aisle_id = a.aisle_id
