@@ -20,19 +20,6 @@ select
         when days_prior_order is null then 'new user' else days_prior_order
     end as days_prior_order,
 
-    {% set days = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-    ] %}
-
-    case
-        order_dow
-        {% for i in range(0, 7) %} when {{ i }} then '{{ days[i] }}' {% endfor %}
-    end as order_day
+    {{ Days() }} as order_day
 
 from source
