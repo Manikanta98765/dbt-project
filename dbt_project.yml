@@ -39,6 +39,7 @@ models:
     staging:
       +schema: staging
       +materialized: table
+      +transient: false
     transform:
       +schema: transform
       +materialized: incremental
