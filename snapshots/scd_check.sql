@@ -1,12 +1,12 @@
-{% snapshot check_time %}
+{% snapshot check_name %}
     {{
         config(
             target_schema="SNAPSHOTS",
             target_database="ANALYTICS",
             unique_key="product_id",
-            strategy="timestamp",
+            strategy="check",
+            check_cols=["product_name", "department"],
             invalidate_hard_deletes=False,
-            updated_at="created_date",
         )
     }}
 
